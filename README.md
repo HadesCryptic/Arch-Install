@@ -5,7 +5,7 @@ This Runs KDE Plasma, Change the "03-Base.sh" to your favorite Desktop Environme
 
 To boot I use "Grub"
 
-This Version Install's the LTS kernel and the default kernel,The grub config file is maid so you can choose between any one in the Advanced Options tab of Grub.
+This Version Install's the LTS kernel and the default kernel,The grub config file is made so you can choose between any one in the Advanced Options tab of Grub.
 
 ### Not Sure Of My scrypt
 Not sure what my scrpit will do...You are free to examine it.
