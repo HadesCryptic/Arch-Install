@@ -1,7 +1,7 @@
 # Arch Installation Scrpit
 
 ### System Description
-This Runs KDE Plasma Change the "03-Base.sh" to your favorite Desktop Environment or Window Manager.
+This Runs KDE Plasma, Change the "03-Base.sh" to your favorite Desktop Environment or Window Manager.
 
 To boot I use "Grub"
 
