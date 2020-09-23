@@ -51,6 +51,8 @@ echo -e "\nDone!\n"
     sudo pacman -S xorg pulseaudio pulseaudio-alsa terminator --noconfirm --needed
     sudo sed -i 's/^#greeter-session=example-gtk-gnome/greeter-session=lightdm-webkit2-greeter/' /etc/lightdm/lightdm.conf
     sudo systemctl enable lightdm
+    sudo systemctl enable bluetooth
+    systemctl enable org.cups.cupsd
     cd "${HOME}"
     git clone "https://aur.archlinux.org/yay.git"
     cd yay
