@@ -15,7 +15,6 @@ PKGS=(
     # --- Bluetooth
         'bluez'                 # Daemons for the bluetooth protocol stack
         'bluez-utils'           # Bluetooth development and debugging utilities
-        'bluez-firmware'        # Firmwares for Broadcom BCM203x and STLC2300 Bluetooth chips
         'blueberry'             # Bluetooth configuration tool
         'pulseaudio-bluetooth'  # Bluetooth support for PulseAudio
     
@@ -58,7 +57,7 @@ echo -e "\nDone!\n"
     makepkg -si --noconfirm
     yay -S brave-bin pamac lightdm-webkit-theme-aether --noconfirm
     echo Setting Sudo Password
-    sed -i 's/^%wheel ALL=(ALL) NOPASSWD: ALL/# %wheel ALL=(ALL) NOPASSWD: ALL/' /etc/sudoers
-    sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
+    sudo sed -i 's/^%wheel ALL=(ALL) NOPASSWD: ALL/# %wheel ALL=(ALL) NOPASSWD: ALL/' /etc/sudoers
+    sudo sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
 
 echo -e "\nReady For Reboot\n"
