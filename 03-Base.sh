@@ -7,7 +7,10 @@ PKGS=(
     # --- Setup Desktop
         'plasma'                #KDE Plasma
         'dolphin'               #File Explorer
-        
+        'awesome'               #Awesome Window Manager
+        'nitrogen'              #Background Maker
+        'picom'                 #Transparency
+
     # --- Login Display Manager
         'lightdm'                   # Base Login Manager
         'lightdm-webkit2-greeter'   # Framework for Awesome Login Themes
@@ -33,6 +36,7 @@ PKGS=(
         'openssh'               # SSH connectivity tools
         'wget'                  # Remote content retrieval
         'zsh'                   # ZSH shell
+        'xterm'                 #Default Terminal Emulator
 
     # --- Development
         'code'                  # Visual Studio Code
