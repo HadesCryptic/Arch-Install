@@ -59,7 +59,7 @@ echo -e "\nDone!\n"
     makepkg -si --noconfirm
     yay -S brave-bin pamac lightdm-webkit-theme-aether --noconfirm
     echo Setting Sudo Password
-    sudo sed -i 's/^%wheel ALL=(ALL) NOPASSWD: ALL/# %wheel ALL=(ALL) NOPASSWD: ALL/' /etc/sudoers
     sudo sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
+    sudo sed -i 's/^%wheel ALL=(ALL) NOPASSWD: ALL/# %wheel ALL=(ALL) NOPASSWD: ALL/' /etc/sudoers
 
 echo -e "\nReady For Reboot\n"
