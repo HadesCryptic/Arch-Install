@@ -5,8 +5,15 @@ echo -e "\nInstalling Desktop\n"
 PKGS=(
 
     # --- Setup Desktop
-        'plasma'                #KDE Plasma
-        'dolphin'               #File Explorer
+        'plasma'                # KDE Plasma
+        'nautilus'              # File Explorer
+        'nitrogen'              # Wallpaper Maker
+        'lxappearance'          # Themes
+        'picom'                 # Transparency
+        'xmonad'                # XMonad
+        'xmobar'                # XMobar
+        'xmonad-contrib'        # Additional Packages
+        
 
     # --- Login Display Manager
         'lightdm'                   # Base Login Manager
@@ -49,7 +56,7 @@ for PKG in "${PKGS[@]}"; do
     sudo pacman -S "$PKG" --noconfirm --needed
 done
 echo -e "\nDone!\n"
-    sudo pacman -S xorg pulseaudio pulseaudio-alsa terminator --noconfirm --needed
+    sudo pacman -S xorg pulseaudio pulseaudio-alsa alacritty --noconfirm --needed
     sudo sed -i 's/^#greeter-session=example-gtk-gnome/greeter-session=lightdm-webkit2-greeter/' /etc/lightdm/lightdm.conf
     sudo systemctl enable lightdm
     sudo systemctl enable bluetooth
@@ -62,5 +69,6 @@ echo -e "\nDone!\n"
     echo Setting Sudo Password
     sudo sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
     sudo sed -i 's/^%wheel ALL=(ALL) NOPASSWD: ALL/# %wheel ALL=(ALL) NOPASSWD: ALL/' /etc/sudoers
+    sudo sed -i 's/^vsync = true;/# vsync = true;/' /etc/xdg/picom.conf
 
 echo -e "\nReady For Reboot\n"
