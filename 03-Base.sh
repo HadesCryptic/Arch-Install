@@ -7,9 +7,6 @@ PKGS=(
     # --- Setup Desktop
         'plasma'                #KDE Plasma
         'dolphin'               #File Explorer
-        'awesome'               #Awesome Window Manager
-        'nitrogen'              #Background Maker
-        'picom'                 #Transparency
 
     # --- Login Display Manager
         'lightdm'                   # Base Login Manager
