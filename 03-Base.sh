@@ -52,7 +52,7 @@ echo -e "\nDone!\n"
     sudo sed -i 's/^#greeter-session=example-gtk-gnome/greeter-session=lightdm-webkit2-greeter/' /etc/lightdm/lightdm.conf
     sudo systemctl enable lightdm
     sudo systemctl enable bluetooth
-    systemctl enable org.cups.cupsd
+    sudo systemctl enable org.cups.cupsd
     cd "${HOME}"
     git clone "https://aur.archlinux.org/yay.git"
     cd yay
