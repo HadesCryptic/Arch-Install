@@ -11,6 +11,7 @@ PKGS=(
         'lxappearance'          # Themes
         'picom'                 # Transparency
         'qtile'                 # Qtile
+        'dmenu'                 # Dmenu
 
     # --- Login Display Manager
         'sddm'                  # Login Manager
