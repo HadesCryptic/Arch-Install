@@ -10,10 +10,7 @@ PKGS=(
         'nitrogen'              # Wallpaper Maker
         'lxappearance'          # Themes
         'picom'                 # Transparency
-        'xmonad'                # XMonad
-        'xmobar'                # XMobar
-        'xmonad-contrib'        # Additional Packages
-        
+        'qtile'                 # Qtile
 
     # --- Login Display Manager
         'lightdm'                   # Base Login Manager
