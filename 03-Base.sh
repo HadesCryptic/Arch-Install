@@ -13,8 +13,7 @@ PKGS=(
         'qtile'                 # Qtile
 
     # --- Login Display Manager
-        'lightdm'                   # Base Login Manager
-        'lightdm-webkit2-greeter'   # Framework for Awesome Login Themes
+        'sddm'                  # Login Manager
 
     # --- Bluetooth
         'bluez'                 # Daemons for the bluetooth protocol stack
@@ -54,15 +53,14 @@ for PKG in "${PKGS[@]}"; do
 done
 echo -e "\nDone!\n"
     sudo pacman -S xorg pulseaudio pulseaudio-alsa alacritty --noconfirm --needed
-    sudo sed -i 's/^#greeter-session=example-gtk-gnome/greeter-session=lightdm-webkit2-greeter/' /etc/lightdm/lightdm.conf
-    sudo systemctl enable lightdm
+    sudo systemctl enable sddm
     sudo systemctl enable bluetooth
     sudo systemctl enable org.cups.cupsd
     cd "${HOME}"
     git clone "https://aur.archlinux.org/yay.git"
     cd yay
     makepkg -si --noconfirm
-    yay -S brave-bin pamac lightdm-webkit-theme-aether --noconfirm
+    yay -S brave-bin pamac --noconfirm
     echo Setting Sudo Password
     sudo sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
     sudo sed -i 's/^%wheel ALL=(ALL) NOPASSWD: ALL/# %wheel ALL=(ALL) NOPASSWD: ALL/' /etc/sudoers
