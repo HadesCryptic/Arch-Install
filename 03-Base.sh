@@ -20,7 +20,12 @@ PKGS=(
         'bluez'                 # Daemons for the bluetooth protocol stack
         'bluez-utils'           # Bluetooth development and debugging utilities
         'blueberry'             # Bluetooth configuration tool
+        
+    # --- Audio
         'pulseaudio-bluetooth'  # Bluetooth support for PulseAudio
+        'pulsemixer'            # Terminal Mixer
+        'pulseaudio'            # Pulse Audio
+        'pavucontrol'           # GUI Mixer 
     
     # --- Printers
         'cups'                  # Open source printer drivers
@@ -38,7 +43,7 @@ PKGS=(
         'wget'                  # Remote content retrieval
         'zsh'                   # ZSH shell
         'xterm'                 # Default Terminal Emulator
-        'pulsemixer'
+       
 
     # --- Development
         'code'                  # Visual Studio Code
@@ -54,7 +59,7 @@ for PKG in "${PKGS[@]}"; do
     sudo pacman -S "$PKG" --noconfirm --needed
 done
 echo -e "\nDone!\n"
-    sudo pacman -S xorg pulseaudio pavucontrol --noconfirm --needed
+    sudo pacman -S xorg --noconfirm --needed
     sudo systemctl enable sddm
     sudo systemctl enable bluetooth
     sudo systemctl enable org.cups.cupsd
