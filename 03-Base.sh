@@ -6,7 +6,7 @@ PKGS=(
 
     # --- Setup Desktop
         'plasma'                # KDE Plasma
-        'nautilus'              # File Explorer
+        'dolphin'               # File Explorer
         'nitrogen'              # Wallpaper Maker
         'lxappearance'          # Themes
         'picom'                 # Transparency
@@ -28,7 +28,7 @@ PKGS=(
         'ghostscript'           # PostScript interpreter
         'gsfonts'               # Adobe Postscript replacement fonts
         'hplip'                 # HP Drivers
-        'system-config-printer' # Printer setup  utility
+        'system-config-printer'  # Printer setup  utility
 
     # --- Terminal Utilities
         'curl'                  # Remote content retrieval
@@ -37,14 +37,15 @@ PKGS=(
         'openssh'               # SSH connectivity tools
         'wget'                  # Remote content retrieval
         'zsh'                   # ZSH shell
-        'xterm'                 #Default Terminal Emulator
+        'xterm'                 # Default Terminal Emulator
+        'pulsemixer'
 
     # --- Development
         'code'                  # Visual Studio Code
         'python'                # Scripting language
 
     # --- Video
-    'obs-studio'            # Record your screen
+        'obs-studio'            # Record your screen
     
 )
 
@@ -53,7 +54,7 @@ for PKG in "${PKGS[@]}"; do
     sudo pacman -S "$PKG" --noconfirm --needed
 done
 echo -e "\nDone!\n"
-    sudo pacman -S xorg pulseaudio pulseaudio-alsa alacritty --noconfirm --needed
+    sudo pacman -S xorg pulseaudio pavucontrol --noconfirm --needed
     sudo systemctl enable sddm
     sudo systemctl enable bluetooth
     sudo systemctl enable org.cups.cupsd
