@@ -63,8 +63,8 @@ echo -e "\nDone!\n"
     makepkg -si --noconfirm
     yay -S brave-bin pamac --noconfirm
     echo Setting Sudo Password
+    sudo sed -i 's/^vsync = true;/# vsync = true;/' /etc/xdg/picom.conf
     sudo sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
     sudo sed -i 's/^%wheel ALL=(ALL) NOPASSWD: ALL/# %wheel ALL=(ALL) NOPASSWD: ALL/' /etc/sudoers
-    sudo sed -i 's/^vsync = true;/# vsync = true;/' /etc/xdg/picom.conf
 
 echo -e "\nReady For Reboot\n"
