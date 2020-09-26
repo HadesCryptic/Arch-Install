@@ -59,7 +59,7 @@ for PKG in "${PKGS[@]}"; do
     sudo pacman -S "$PKG" --noconfirm --needed
 done
 echo -e "\nDone!\n"
-    sudo pacman -S xorg terminator --noconfirm --needed
+    sudo pacman -S xorg alacritty --noconfirm --needed
     sudo systemctl enable sddm
     sudo systemctl enable bluetooth
     sudo systemctl enable org.cups.cupsd
