@@ -5,7 +5,7 @@ echo -e "\nInstalling Desktop\n"
 PKGS=(
 
     # --- Setup Desktop
-        ''plasma               # KDE Plasma
+        'plasma'               # KDE Plasma
         'dolphin'               # File Explorer
         'nitrogen'              # Wallpaper Maker
         'lxappearance'          # Themes
@@ -41,7 +41,6 @@ PKGS=(
         'neofetch'              # Shows system info when you launch terminal
         'openssh'               # SSH connectivity tools
         'wget'                  # Remote content retrieval
-        'zsh'                   # ZSH shell
         'xterm'                 # Default Terminal Emulator
        
 
