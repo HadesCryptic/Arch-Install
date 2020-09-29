@@ -5,14 +5,13 @@ echo -e "\nInstalling Desktop\n"
 PKGS=(
 
     # --- Setup Desktop
-        'cinnamon'                # KDE Plasma
+        ''plasma               # KDE Plasma
         'dolphin'               # File Explorer
         'nitrogen'              # Wallpaper Maker
         'lxappearance'          # Themes
         'picom'                 # Transparency
         'qtile'                 # Qtile
         'dmenu'                 # Dmenu
-        'breeze'                # Mouse Cursors
 
     # --- Login Display Manager
         'sddm'                  # Login Manager
