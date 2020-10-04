@@ -43,7 +43,7 @@ PKGS=(
         'python'                # Scripting language
 
     # --- Video
-        'obs-studio'            # Record your screen
+        'obs-studio'            # Record the screen
     
 )
 
