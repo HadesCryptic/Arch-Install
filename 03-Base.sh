@@ -60,7 +60,7 @@ echo -e "\nDone!\n"
     git clone "https://aur.archlinux.org/yay.git"
     cd yay
     makepkg -si --noconfirm
-    yay -S vivaldi pamac --noconfirm
+    yay -S brave-bin pamac --noconfirm
     echo Setting Sudo Password
     sudo sed -i 's/^vsync = true;/# vsync = true;/' /etc/xdg/picom.conf
     sudo sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
