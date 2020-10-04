@@ -19,7 +19,6 @@ PKGS=(
     # --- Bluetooth
         'bluez'                 # Daemons for the bluetooth protocol stack
         'bluez-utils'           # Bluetooth development and debugging utilities
-        'blueberry'             # Bluetooth configuration tool
         
     # --- Audio
         'pulseaudio-bluetooth'  # Bluetooth support for PulseAudio
@@ -29,11 +28,6 @@ PKGS=(
     
     # --- Printers
         'cups'                  # Open source printer drivers
-        'cups-pdf'              # PDF support for cups
-        'ghostscript'           # PostScript interpreter
-        'gsfonts'               # Adobe Postscript replacement fonts
-        'hplip'                 # HP Drivers
-        'system-config-printer'  # Printer setup  utility
 
     # --- Terminal Utilities
         'curl'                  # Remote content retrieval
