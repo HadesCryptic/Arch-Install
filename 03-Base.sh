@@ -5,7 +5,7 @@ echo -e "\nInstalling Desktop\n"
 PKGS=(
 
     # --- Setup Desktop
-        'plasma'                # KDE Plasma
+        'cinnamon'              # Cinnamon
         'thunar'                # File Explorer
         'nitrogen'              # Wallpaper Maker
         'lxappearance'          # Themes
@@ -13,9 +13,10 @@ PKGS=(
         'qtile'                 # Qtile
         'dmenu'                 # Dmenu
         'volumeicon'            # Volume Icon
+        'xorg'                  # Display Manager
 
     # --- Login Display Manager
-        'sddm'                  # Login Manager
+        'sddm'               # Login Manager
 
     # --- Bluetooth
         'bluez'                 # Daemons for the bluetooth protocol stack
@@ -27,6 +28,9 @@ PKGS=(
         'pulseaudio'            # Pulse Audio
         'pavucontrol'           # GUI Mixer 
     
+    # --- Browser
+        'firefox'              # Browser
+        
     # --- Printers
         'cups'                  # Open source printer drivers
 
@@ -37,7 +41,7 @@ PKGS=(
         'openssh'               # SSH connectivity tools
         'wget'                  # Remote content retrieval
         'xterm'                 # Default Terminal Emulator
-       
+        'termite'               # Preffered Terminal Emulator
 
     # --- Development
         'code'                  # Visual Studio Code
@@ -53,7 +57,6 @@ for PKG in "${PKGS[@]}"; do
     sudo pacman -S "$PKG" --noconfirm --needed
 done
 echo -e "\nDone!\n"
-    sudo pacman -S xorg alacritty --noconfirm --needed
     sudo systemctl enable sddm
     sudo systemctl enable bluetooth
     sudo systemctl enable org.cups.cupsd
@@ -61,7 +64,7 @@ echo -e "\nDone!\n"
     git clone "https://aur.archlinux.org/yay.git"
     cd yay
     makepkg -si --noconfirm
-    yay -S brave-bin pamac --noconfirm
+    yay -S pamac --noconfirm
     echo Setting Sudo Password
     sudo sed -i 's/^vsync = true;/# vsync = true;/' /etc/xdg/picom.conf
     sudo sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
