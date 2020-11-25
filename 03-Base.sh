@@ -5,7 +5,7 @@ echo -e "\nInstalling Desktop\n"
 PKGS=(
 
     # --- Setup Desktop
-        'cinnamon'              # Cinnamon
+        'plasma'              # Cinnamon
         'thunar'                # File Explorer
         'nitrogen'              # Wallpaper Maker
         'lxappearance'          # Themes
